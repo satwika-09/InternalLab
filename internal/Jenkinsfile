@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages{
+        stage("Build"){
+            state{
+                dat "docker build -t myapp"
+            }
+        }
+        stage("Run"){
+            state{
+                dat "docker run -d -p port 5000:5000 myapp"
+            }
+        }
+    }
+}

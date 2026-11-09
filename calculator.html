@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <script>
+        function calculate() {
+            const n1 = Number(document.getElementById("num1").value);
+            const n2 = Number(document.getElementById("num2").value);
+
+            const result = n1 + n2;
+
+            document.getElementById("result").innerHTML =
+                "Result: " + result;
+        }
+    </script>
+</head>
+<body>
+
+    <input id="num1" type="number">
+    <input id="num2" type="number">
+
+    <button id="calculate" onclick="calculate()">
+        Calculate
+    </button>
+
+    <p id="result"></p>
+
+</body>
+</html>
